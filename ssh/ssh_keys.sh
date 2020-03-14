@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # To run this file directly from a computer without downloading run this:
-# curl -sS https://raw.githubusercontent.com/caballerofelipe/scripts/master/ssh/ssh_keys.sh
+# curl -sS https://raw.githubusercontent.com/caballerofelipe/scripts/master/ssh/ssh_keys.sh | bash
 
 # Used to show SSH fingerprints
 # Inspired by this post: http://superuser.com/a/1030779/369045
