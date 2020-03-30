@@ -25,8 +25,8 @@ function timer_seconds {
 		time_sec_now=$(date +%s)
 		left_minutes=$(( ($time_sec_init + $seconds_to_break - $time_sec_now) / 60 ))
 		left_seconds=$(( ($time_sec_init + $seconds_to_break - $time_sec_now) % 60 ))
-		tput el # Delete to end of line
 		tput cuu1 # Up one line
+		tput el # Delete to end of line
 		printf "%d:%02d\n" $left_minutes $left_seconds
 	}
 
