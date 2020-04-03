@@ -36,17 +36,6 @@ if [ -e $muttdirExpanded ]; then
 fi
 
 echo
-echo '... Attempting mutt install'
-brew install mutt
-if [ $? -ne 0 ]; then
-	echo -e 'brew mutt install: \033[31mfailed\033[0m'
-	echo 'Exiting'
-	exit
-else
-	echo 'mutt install: \033[32mdone\033[0m'
-fi
-
-echo
 echo "... Setting $muttrcFile"
 { # See https://stackoverflow.com/a/51113160/1071459
 	echo "set imap_user = \"$userdomain\""
@@ -70,3 +59,14 @@ echo "... Creating directories in $muttdir"
 mkdir -p $muttdirExpanded/cache/headers
 mkdir -p $muttdirExpanded/cache/bodies
 mkdir -p $muttdirExpanded/certificates
+
+echo
+echo '... Attempting mutt install'
+brew install mutt
+if [ $? -ne 0 ]; then
+	echo -e 'brew mutt install: \033[31mfailed\033[0m'
+	echo 'Exiting'
+	exit
+else
+	echo 'mutt install: \033[32mdone\033[0m'
+fi
